@@ -17,6 +17,7 @@ def read_corpus(collection):
         sys.exit(1)
 
     try:
+        with open(corpus_file, 'r', encoding='utf-8') as file:
             doc_id = None
             doc_text = []
             found_ids = set()  # Track document IDs found
