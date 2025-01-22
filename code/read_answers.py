@@ -52,12 +52,12 @@ def read_answers(collection):
 
                 # Check if the query ID exists in .QRY
                 if query_id not in valid_queries:
-                    print(f"{collection} ERROR .I={query_id} NotFound in .QRL", file=sys.stderr)
+                    print(f"{collection} ERROR .I={query_id} NotFound in {collection}.QRL", file=sys.stderr)
                     sys.exit(1)
 
                 # Check if the document ID exists in .ALL
                 if doc_id not in valid_documents:
-                    print(f"{collection} ERROR .I={doc_id} NotFound in .ALL", file=sys.stderr)
+                    print(f"{collection} ERROR .I={doc_id} NotFound in {collection}.ALL", file=sys.stderr)
                     sys.exit(1)
 
                 if query_id not in answers:
